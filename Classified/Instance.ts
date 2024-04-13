@@ -1,9 +1,9 @@
 /**
- * Write a function named getClassName that does the following:
- * Takes an object or any class or data type as param
- * Takes an array of ClassNames that contains the possible names of classes that the obj can belong to
- * Print the object's className and done
- * Returns the index of the className from the passed array that matches the className.
+ * @todo Write a function named getClassName that does the following:
+ * @param Takes an object or any class or data type as param
+ * @param Takes an array of ClassNames that contains the possible names of classes that the obj can belong to
+ * @do Print the object's className and done
+ * @returns Returns the index of the className from the passed array that matches the className.
  */
 
 class First { }
