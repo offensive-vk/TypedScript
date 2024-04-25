@@ -1,4 +1,4 @@
-// Life Cycle Program
+// Life Cycle Program - A Happy Family 
 class Kid {
     private name: string;
     private age: number;
