@@ -1,13 +1,65 @@
 {
     "compilerOptions": {
-        "target": "ES2017",         
-        "lib": ["ES2017","ES2020","DOM"],
-        "module": "commonjs",
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,           
-        "strict": true,        
-        "checkJs": false,            
-        "allowUnreachableCode": false,                  
+        // Basic Options
+        "target": "ES2020", // Target latest ECMAScript version
+        "module": "ESNext", // Specify module code generation
+        "lib": [
+            "ES2020",
+            "DOM"
+        ], // Include latest libraries
+        "outDir": "./dist", // Redirect output structure to the dist directory
+        "rootDir": ".", // Specify the root directory of input files
+        "declaration": true, // Generate .d.ts declaration files
+        "declarationMap": true, // Create sourcemaps for d.ts files
+        "sourceMap": true, // Generate source maps
+        "moduleResolution": "node", // Resolve modules using Node.js strategy
+        "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+        "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+        "strict": true, // Enable all strict type-checking options
+        "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+        "strictNullChecks": true, // Enable strict null checks
+        "strictFunctionTypes": true, // Ensure function types are strictly compatible
+        "strictBindCallApply": true, // Ensure strict bind, call, and apply methods
+        "strictPropertyInitialization": true, // Ensure class properties are initialized in the constructor
+        "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type
+        "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+        // Module and Path Options
+        "resolveJsonModule": true, // Include modules imported with .json extension
+        "baseUrl": ".", // Base directory to resolve non-relative module names
+        "paths": { // Path mapping
+            "@app/*": [
+                "src/app/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ]
+        },
+        // Output Options
+        "downlevelIteration": true, // Provide full support for iterables in 'for..of', spread and array destructuring when targeting ES5 or ES3
+        "emitDeclarationOnly": false, // Only emit .d.ts declaration files
+        // Source Map Options
+        "inlineSourceMap": false, // Include source maps inside the emitted JavaScript
+        "inlineSources": true, // Include the original source code in the source maps
+        // Type Checking Options
+        "skipLibCheck": true, // Skip type checking of declaration files
+        "forceConsistentCasingInFileNames": true, // Ensure file casing consistency
+        // Additional Options
+        "experimentalDecorators": true, // Enable experimental support for decorators
+        "emitDecoratorMetadata": true, // Emit design-type metadata for decorated declarations
+        "importHelpers": true, // Import emit helpers from 'tslib'
+        "jsx": "react-jsx", // Specify JSX code generation (for React projects)
+        // Node.js Specific Options
+        "allowJs": true, // Allow JavaScript files to be compiled
+        "checkJs": true, // Report errors in JavaScript files
+        "noEmit": false, // Do not emit outputs
+        "noEmitOnError": true, // Do not emit outputs if there are errors
     },
-    "exclude": ["Classified", "Others"]
+    "include": [
+        "./**/*.ts",
+        "./**/*.tsx"
+    ], // Include all TypeScript files in the src directory
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ] // Exclude node_modules and test files
 }
