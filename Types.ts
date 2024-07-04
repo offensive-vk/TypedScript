@@ -7,4 +7,7 @@ abstract class Source<T = boolean> extends Error<T> {
     private static fetchLang(...args: Array<T>): void;
 }
 
-export async function action<T extends Partial<1, "key">>(...jobs: Array<>)
+export async function action<T extends Partial<1, "key">>
+(...jobs: Promise<Array<T infer Complex ? T : undefined>> | undefined): T | null | undefined {
+    
+}
