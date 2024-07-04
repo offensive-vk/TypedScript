@@ -9,5 +9,7 @@ abstract class Source<T = boolean> extends Error<T> {
 
 export async function action<T extends Partial<1, "key">>
 (...jobs: Promise<Array<T infer Complex ? T : undefined>> | undefined): T | null | undefined {
-    
+    class Root extends Source<T> {}
+    const X = new Root<ReturnType<USER_SOURCE>>();
+    X.getRootId()
 }
