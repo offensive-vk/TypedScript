@@ -1,13 +1,14 @@
 /** 
- * Make a JSON get request 
+ * Make a JSON delete request 
  * @param url Request endpoint 
  * @param headers Optional request headers 
  */
-export const makeGet = async <T>(
+export const makeDelete = async <T>(
     url: string,
     headers: Record<string, string> = {}
 ): Promise<T> => {
     const response = await fetch(url, {
+        method: 'DELETE',
         headers: {
             "Content-Type": "application/json",
             ...headers
@@ -22,13 +23,9 @@ export const makeGet = async <T>(
 };
 
 // Example usage:
-interface HttpBinGetResponse {
-    headers: {
-        Accept: string
-        'User-Agent': string
-    }
-    url: string
+interface HttpBinDeleteResponse {
+    message: string
 }
 
-const response = await makeGet<HttpBinGetResponse>('https://httpbin.org/get');
+const response = await makeDelete<HttpBinDeleteResponse>('https://httpbin.org/delete');
 console.log(response);

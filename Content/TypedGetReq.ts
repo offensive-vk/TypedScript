@@ -1,13 +1,16 @@
 /** 
- * Make a JSON get request 
+ * Make a JSON get request with query parameters 
  * @param url Request endpoint 
+ * @param params Query parameters 
  * @param headers Optional request headers 
  */
-export const makeGet = async <T>(
+export const makeGetWithQuery = async <T>(
     url: string,
+    params: Record<string, string>,
     headers: Record<string, string> = {}
 ): Promise<T> => {
-    const response = await fetch(url, {
+    const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
+    const response = await fetch(`${url}?${queryString}`, {
         headers: {
             "Content-Type": "application/json",
             ...headers
@@ -30,5 +33,8 @@ interface HttpBinGetResponse {
     url: string
 }
 
-const response = await makeGet<HttpBinGetResponse>('https://httpbin.org/get');
+const response = await makeGetWithQuery<HttpBinGetResponse>('https://httpbin.org/get', {
+    foo: 'bar',
+    baz: 'qux'
+});
 console.log(response);
