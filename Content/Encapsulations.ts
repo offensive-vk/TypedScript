@@ -1,7 +1,6 @@
 class Car {
     private make: string;
     private model: string;
-    public src: number;
 
     constructor(make: string, model: string) {
         this.make = make;
@@ -33,5 +32,4 @@ console.log(`Make: ${myCar.getMake()}`);
 console.log(`Model: ${myCar.getModel()}`);
 
 myCar.startEngine();
-
 //myCar.drive(); // Error: Property 'drive' is private and only accessible within class 'Car'.
