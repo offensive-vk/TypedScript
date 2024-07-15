@@ -10,7 +10,7 @@ try {
     const result = divide(10, 0);
     console.log("Result:", result);
 } catch (error) {
-    console.error("Caught an error:", error.message);
+    console.error("Caught an error:", error);
 }
 
 // with classes
@@ -31,12 +31,11 @@ try {
     if (error instanceof CustomError) {
         console.error("Caught a CustomError:", error.message);
     } else {
-        console.error("Caught an unknown error:", error.message);
+        console.error("Caught an unknown error:", error instanceof Error ? error : error);
     }
 }
 
 // Multiple errors with try and catch.
-
 function processNumbers(a: number, b: number): void {
     try {
         const result = divide(a, b);
