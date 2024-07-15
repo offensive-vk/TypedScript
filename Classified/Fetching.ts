@@ -49,7 +49,7 @@ async function Validate(data: UserData<number, string>): Promise<boolean> {
 
     const WritableData =  "\n" + userid + "\n" + username;
 
-    fs.appendFile('data.txt', WritableData, 'utf-8', (err) => {
+    fs.appendFile('data.txt', WritableData, 'utf-8', (err: Error) => {
         handleError(() => {
             if(err) throw err;
         });
@@ -98,7 +98,7 @@ interface INominal<T> {
     getDetails<K>(Obj: K): T | void;
 }
 
-function GetPrimaryData<Type>(User: INominal<unknown>) : Type | string | void{
+function GetPrimaryData<Type>(User: INominal<unknown>) : Type | string | number {
     console.log(`UserType : ${User.DefaultType}`);
     if(typeof User.DefaultPort == 'number'){
         
