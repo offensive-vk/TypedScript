@@ -54,8 +54,8 @@ a project may be further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the our team at our email(s) <superuser.ntsystems@outlook.com> or <node_modules@hotmail.com>. All
-complaints will be reviewed and investigated and will result in a response that
+reported by contacting the our team at our email(s) <superuser.ntsystems@outlook.com>. 
+All complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. We as team
 will maintain confidentiality with regard to the reporter of an incident.
 Enforcement may result in an indefinite ban from all official communication
