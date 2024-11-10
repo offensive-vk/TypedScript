@@ -1,5 +1,5 @@
 // Decorator function with parameters
-// @ts-nocheck
+
 function logClass(logMessage: string) {
     return function (target: Function) {
         console.log(`Class ${target.name} is instantiated. Log message: ${logMessage}`);
