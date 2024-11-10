@@ -1,4 +1,24 @@
 {
+  "name": "TypedScript",
+  "version": "10.0.0",
+  "description": "TypedScript - A Static Repository for Hosting My Personal *TypeScript* Programs. ~ TypeScript is also known as JavaScript with Static Types.",
+  "main": "",
+  "bot": "https://github.com/TheHamsterBot",
+  "scripts": {},
+  "keywords": [],
+  "author": {
+    "name": "Vedansh ✨",
+    "url": "https://github.com/offensive-vk/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/offensive-vk/TypedScript"
+  },
+  "bugs": {
+    "url": "https://github.com/offensive-vk/TypedScript/issues"
+  },
+  "homepage": "https://github.com/offensive-vk/TypedScript",
   "dependencies": {
     "adm-zip": "^0.5.12",
     "ytdl-core": "^4.11.5"
